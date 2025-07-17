@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HDRTVDM Demo Comparison</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f0f0f0;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .pair {
+      margin-bottom: 60px;
+    }
+    .group-title {
+      text-align: center;
+      font-size: 1.2em;
+      margin-bottom: 16px;
+      font-weight: bold;
+    }
+    .video-row {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .video-block {
+      flex: 1;
+      min-width: 300px;
+      max-width: 600px;
+    }
+    video {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.15);
+    }
+    .caption {
+      text-align: center;
+      margin-top: 8px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+    <div style="
+    background: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeeba;
+    padding: 12px 20px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    font-size: 1rem;
+    text-align: center;
+    ">
+    ⚠️ The HDR videos on the right require an HDR-compatible display to show full brightness and color range.
+    </div>
+
+  <h1>HDRTVDM SDR → HDR Comparison</h1>
+
+  <div class="pair">
+    <div class="group-title">Example 0</div>
+    <div class="video-row">
+      <div class="video-block">
+        <video controls>
+          <source src="0_SDR.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="caption">Before (0_SDR.mp4)</div>
+      </div>
+      <div class="video-block">
+        <video controls>
+          <source src="0_HDR.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="caption">After (0_HDR.mp4)</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pair">
+    <div class="group-title">Example 2</div>
+    <div class="video-row">
+      <div class="video-block">
+        <video controls>
+          <source src="2_SDR.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="caption">Before (2_SDR.mp4)</div>
+      </div>
+      <div class="video-block">
+        <video controls>
+          <source src="2_HDR.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="caption">After (2_HDR.mp4)</div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
