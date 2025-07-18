@@ -78,19 +78,11 @@
     <div class="group-title">Example 0</div>
     <div class="video-row">
       <div class="video-block">
-        <video controls autoplay loop muted playsinline>
-          <source src="0_SDR.mov" type='video/quicktime; codecs="hvc1"'>
-          <source src="0_SDR.mp4" type='video/mp4; codecs="hvc1"'>
-          Your browser does not support the video tag.
-        </video>
+        <video id="video-0-sdr" controls autoplay loop muted playsinline></video>
         <div class="caption">Before (0_SDR)</div>
       </div>
       <div class="video-block">
-        <video controls autoplay loop muted playsinline>
-          <source src="0_HDR.mov" type='video/quicktime; codecs="hvc1"'>
-          <source src="0_HDR.mp4" type='video/mp4; codecs="hvc1"'>
-          Your browser does not support the video tag.
-        </video>
+        <video id="video-0-hdr" controls autoplay loop muted playsinline></video>
         <div class="caption">After (0_HDR)</div>
       </div>
     </div>
@@ -100,23 +92,34 @@
     <div class="group-title">Example 2</div>
     <div class="video-row">
       <div class="video-block">
-        <video controls autoplay loop muted playsinline>
-          <source src="2_SDR.mov" type='video/quicktime; codecs="hvc1"'>
-          <source src="2_SDR.mp4" type='video/mp4; codecs="hvc1"'>
-          Your browser does not support the video tag.
-        </video>
+        <video id="video-2-sdr" controls autoplay loop muted playsinline></video>
         <div class="caption">Before (2_SDR)</div>
       </div>
       <div class="video-block">
-        <video controls autoplay loop muted playsinline>
-          <source src="2_HDR.mov" type='video/quicktime; codecs="hvc1"'>
-          <source src="2_HDR.mp4" type='video/mp4; codecs="hvc1"'>
-          Your browser does not support the video tag.
-        </video>
+        <video id="video-2-hdr" controls autoplay loop muted playsinline></video>
         <div class="caption">After (2_HDR)</div>
       </div>
     </div>
   </div>
 
+  <script>
+    function isIOS() {
+      return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+    }
+
+    function addSources(videoId, baseName) {
+      const video = document.getElementById(videoId);
+      const ext = isIOS() ? 'mov' : 'mp4';
+      const source = document.createElement('source');
+      source.src = `${baseName}.${ext}`;
+      source.type = ext === 'mov' ? 'video/quicktime; codecs="hvc1"' : 'video/mp4; codecs="hvc1"';
+      video.appendChild(source);
+    }
+
+    addSources('video-0-sdr', '0_SDR');
+    addSources('video-0-hdr', '0_HDR');
+    addSources('video-2-sdr', '2_SDR');
+    addSources('video-2-hdr', '2_HDR');
+  </script>
 </body>
 </html>
