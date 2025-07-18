@@ -112,7 +112,7 @@
       const ext = isIOS() ? 'mov' : 'mp4';
       const source = document.createElement('source');
       source.src = `${baseName}.${ext}`;
-      source.type = ext === 'mov' ? 'video/quicktime; codecs="hvc1"' : 'video/mp4; codecs="hvc1"';
+      //source.type = ext === 'mov' ? 'video/quicktime; codecs="hvc1"' : 'video/mp4; codecs="hvc1"';
       video.appendChild(source);
     }
 
