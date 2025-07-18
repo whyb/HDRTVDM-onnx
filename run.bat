@@ -23,3 +23,12 @@ ffmpeg -y -loop 1 -t 3 -r 1 -i 2_HDR.tif -c:v libx265 -pix_fmt yuv420p10le -x265
 python method/export_onnx.py --output TriSegNet.onnx --height 1080 --width 1920
 python method/export_onnx.py --output TriSegNet_3DM.onnx --height 1080 --width 1920
 python method/export_onnx.py --output TriSegNet_DaVinci.onnx --height 1080 --width 1920
+
+
+
+ffmpeg -y -loop 1 -t 3 -r 1 -i 0.jpg -c:v libx265 -pix_fmt yuv420p10le -tag:v hvc1 -movflags faststart 0_SDR.mov
+ffmpeg -y -loop 1 -t 3 -r 1 -i 2.jpg -c:v libx265 -pix_fmt yuv420p10le -tag:v hvc1 -movflags faststart 2_SDR.mov
+
+ffmpeg -y -loop 1 -t 3 -r 1 -i 0_HDR.tif -c:v libx265 -pix_fmt yuv420p10le -x265-params "colorprim=9:transfer=18:colormatrix=9" -tag:v hvc1 -movflags faststart 0_HDR.mov
+
+ffmpeg -y -loop 1 -t 3 -r 1 -i 2_HDR.tif -c:v libx265 -pix_fmt yuv420p10le -x265-params "colorprim=9:transfer=18:colormatrix=9" -tag:v hvc1 -movflags faststart 2_HDR.mov

@@ -47,7 +47,7 @@
   </style>
 </head>
 <body>
-    <div style="
+  <div style="
     background: #fff3cd;
     color: #856404;
     border: 1px solid #ffeeba;
@@ -56,41 +56,42 @@
     border-radius: 6px;
     font-size: 1rem;
     text-align: center;
-    ">
+  ">
     ⚠️ The HDR videos on the right require an HDR-compatible display to show full brightness and color range.
-    </div>
+  </div>
 
-    <h1>HDRTVDM SDR → HDR Comparison</h1>
+  <h1>HDRTVDM SDR → HDR Comparison</h1>
 
-    <div style="
-        text-align: center;
-        margin-top: -20px;
-        margin-bottom: 40px;
-        font-size: 1rem;
-    ">
-        📁 GitHub repository: 
-        <a href="https://github.com/whyb/HDRTVDM-onnx" target="_blank" style="color: #007acc; text-decoration: none; font-weight: bold;">
-        github.com/whyb/HDRTVDM-onnx
-        </a>
-    </div>
-
+  <div style="
+    text-align: center;
+    margin-top: -20px;
+    margin-bottom: 40px;
+    font-size: 1rem;
+  ">
+    📁 GitHub repository: 
+    <a href="https://github.com/whyb/HDRTVDM-onnx" target="_blank" style="color: #007acc; text-decoration: none; font-weight: bold;">
+      github.com/whyb/HDRTVDM-onnx
+    </a>
+  </div>
 
   <div class="pair">
     <div class="group-title">Example 0</div>
     <div class="video-row">
       <div class="video-block">
         <video controls autoplay loop muted playsinline>
+          <source src="0_SDR.mov" type='video/quicktime; codecs="hvc1"'>
           <source src="0_SDR.mp4" type='video/mp4; codecs="hvc1"'>
           Your browser does not support the video tag.
         </video>
-        <div class="caption">Before (0_SDR.mp4)</div>
+        <div class="caption">Before (0_SDR)</div>
       </div>
       <div class="video-block">
         <video controls autoplay loop muted playsinline>
+          <source src="0_HDR.mov" type='video/quicktime; codecs="hvc1"'>
           <source src="0_HDR.mp4" type='video/mp4; codecs="hvc1"'>
           Your browser does not support the video tag.
         </video>
-        <div class="caption">After (0_HDR.mp4)</div>
+        <div class="caption">After (0_HDR)</div>
       </div>
     </div>
   </div>
@@ -100,17 +101,19 @@
     <div class="video-row">
       <div class="video-block">
         <video controls autoplay loop muted playsinline>
+          <source src="2_SDR.mov" type='video/quicktime; codecs="hvc1"'>
           <source src="2_SDR.mp4" type='video/mp4; codecs="hvc1"'>
           Your browser does not support the video tag.
         </video>
-        <div class="caption">Before (2_SDR.mp4)</div>
+        <div class="caption">Before (2_SDR)</div>
       </div>
       <div class="video-block">
         <video controls autoplay loop muted playsinline>
+          <source src="2_HDR.mov" type='video/quicktime; codecs="hvc1"'>
           <source src="2_HDR.mp4" type='video/mp4; codecs="hvc1"'>
           Your browser does not support the video tag.
         </video>
-        <div class="caption">After (2_HDR.mp4)</div>
+        <div class="caption">After (2_HDR)</div>
       </div>
     </div>
   </div>
