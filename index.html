@@ -34,6 +34,12 @@
       min-width: 300px;
       max-width: 600px;
     }
+    .video-block img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.15);
+    }
     video {
       width: 100%;
       border-radius: 8px;
@@ -57,7 +63,7 @@
     font-size: 1rem;
     text-align: center;
   ">
-    ⚠️ The HDR videos on the right require an HDR-compatible display to show full brightness and color range.
+    ⚠️ The HDR pictures on the right require an HDR-compatible display to show full brightness and color range.
   </div>
 
   <h1>HDRTVDM SDR → HDR Comparison</h1>
@@ -78,11 +84,11 @@
     <div class="group-title">Example 0</div>
     <div class="video-row">
       <div class="video-block">
-        <video id="video-0-sdr" controls autoplay loop muted playsinline></video>
+        <img src="0.jpg"/>
         <div class="caption">Before (0_SDR)</div>
       </div>
       <div class="video-block">
-        <video id="video-0-hdr" controls autoplay loop muted playsinline></video>
+        <img src="0_HDR.avif"/>
         <div class="caption">After (0_HDR)</div>
       </div>
     </div>
@@ -92,34 +98,14 @@
     <div class="group-title">Example 2</div>
     <div class="video-row">
       <div class="video-block">
-        <video id="video-2-sdr" controls autoplay loop muted playsinline></video>
+        <img src="2.jpg"/>
         <div class="caption">Before (2_SDR)</div>
       </div>
       <div class="video-block">
-        <video id="video-2-hdr" controls autoplay loop muted playsinline></video>
+        <img src="2_HDR.avif"/>
         <div class="caption">After (2_HDR)</div>
       </div>
     </div>
   </div>
-
-  <script>
-    function isIOS() {
-      return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-    }
-
-    function addSources(videoId, baseName) {
-      const video = document.getElementById(videoId);
-      const ext = isIOS() ? 'mov' : 'mp4';
-      const source = document.createElement('source');
-      source.src = `${baseName}.${ext}`;
-      //source.type = ext === 'mov' ? 'video/quicktime; codecs="hvc1"' : 'video/mp4; codecs="hvc1"';
-      video.appendChild(source);
-    }
-
-    addSources('video-0-sdr', '0_SDR');
-    addSources('video-0-hdr', '0_HDR');
-    addSources('video-2-sdr', '2_SDR');
-    addSources('video-2-hdr', '2_HDR');
-  </script>
 </body>
 </html>
