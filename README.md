@@ -16,7 +16,17 @@ You can evaluate the enhancement quality by comparing the original SDR pictures 
 
 <table> <tr> <td align="center"><strong>Before (0_SDR)</strong></td> <td align="center"><strong>After (0_HDR)</strong></td> </tr> <tr> <td><img src="0.jpg" alt="0_SDR" style="max-width:100%; border-radius:8px"/></td> <td><img src="0_HDR.avif" alt="0_HDR" style="max-width:100%; border-radius:8px"/></td> </tr> </table>
 
+<table> <tr> <td align="center"><strong>Before (1_SDR)</strong></td> <td align="center"><strong>After (1_HDR)</strong></td> </tr> <tr> <td><img src="1.jpg" alt="1_SDR" style="max-width:100%; border-radius:8px"/></td> <td><img src="1_HDR.avif" alt="1_HDR" style="max-width:100%; border-radius:8px"/></td> </tr> </table>
+
 <table> <tr> <td align="center"><strong>Before (2_SDR)</strong></td> <td align="center"><strong>After (2_HDR)</strong></td> </tr> <tr> <td><img src="2.jpg" alt="2_SDR" style="max-width:100%; border-radius:8px"/></td> <td><img src="2_HDR.avif" alt="2_HDR" style="max-width:100%; border-radius:8px"/></td> </tr> </table>
+
+<table> <tr> <td align="center"><strong>Before (3_SDR)</strong></td> <td align="center"><strong>After (3_HDR)</strong></td> </tr> <tr> <td><img src="3.jpg" alt="3_SDR" style="max-width:100%; border-radius:8px"/></td> <td><img src="3_HDR.avif" alt="3_HDR" style="max-width:100%; border-radius:8px"/></td> </tr> </table>
+
+<table> <tr> <td align="center"><strong>Before (4_SDR)</strong></td> <td align="center"><strong>After (4_HDR)</strong></td> </tr> <tr> <td><img src="4.jpg" alt="4_SDR" style="max-width:100%; border-radius:8px"/></td> <td><img src="4_HDR.avif" alt="4_HDR" style="max-width:100%; border-radius:8px"/></td> </tr> </table>
+
+<table> <tr> <td align="center"><strong>Before (5_SDR)</strong></td> <td align="center"><strong>After (5_HDR)</strong></td> </tr> <tr> <td><img src="5.jpg" alt="5_SDR" style="max-width:100%; border-radius:8px"/></td> <td><img src="5_HDR.avif" alt="5_HDR" style="max-width:100%; border-radius:8px"/></td> </tr> </table>
+
+<table> <tr> <td align="center"><strong>Before (6_SDR)</strong></td> <td align="center"><strong>After (6_HDR)</strong></td> </tr> <tr> <td><img src="6.jpg" alt="6_SDR" style="max-width:100%; border-radius:8px"/></td> <td><img src="6_HDR.avif" alt="6_HDR" style="max-width:100%; border-radius:8px"/></td> </tr> </table>
 
 All demo files are included in this repo.
 
